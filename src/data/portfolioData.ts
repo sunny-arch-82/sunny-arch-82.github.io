@@ -49,7 +49,7 @@ export const portfolioData = {
   // ABOUT SECTION - Bio only (removed highlight cards)
   aboutBio: {
     paragraphs: [
-      "I am a Master's student in Computer Science at the University of Colorado Boulder, focused on building reliable AI and ML systems that work in real-world settings. I got into AI by asking a simple question: can machines really replace humans? That curiosity pulled me from traditional computer science into building systems that have to work with messy, real-world data.",
+      "I am a Master's student in Computer Science at the University of Colorado Boulder, focused on building reliable AI and ML systems that work in real-world settings. I got into AI by asking a simple question: can AI really replace humans? That curiosity pulled me from traditional computer science into building systems that have to work with messy, real-world data.",
       
       "I enjoy turning ambiguity into structure by making data usable, designing end-to-end machine learning pipelines, and building models that real users can actually trust. I am especially drawn to user-facing ML and bridging the gap between research ideas and production-ready systems.",
 
