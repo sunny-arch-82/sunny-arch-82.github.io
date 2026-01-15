@@ -11,7 +11,7 @@ export const portfolioData = {
     firstName: "sK",
     headline: "Data Scientist | AI/ML Engineer",
     tagline: "Building intelligent systems that transform data into impact",
-    pitch: "I build reliable AI/ML systems.",
+    pitch: "I build reliable AI/ML systems from data to deployment.",
     location: "Boulder, CO - 80301",
     phone: "(720) 742-1391",
     email: "synnychinu@gmail.com",
@@ -41,7 +41,7 @@ export const portfolioData = {
       location: "Chennai, India",
       startDate: "Sep 2021",
       endDate: "May 2025",
-      gpa: "3.9",
+      gpa: "3.82",
       courses: ["Artificial Intelligence", "Data Structures", "Computer Networks", "Operating Systems"]
     }
   ],
@@ -51,7 +51,9 @@ export const portfolioData = {
     paragraphs: [
       "I am a Master's student in Computer Science at the University of Colorado Boulder, focused on building reliable AI and ML systems that work in real-world settings. I got into AI by asking a simple question: can machines really replace humans? That curiosity pulled me from traditional computer science into building systems that have to work with messy, real-world data.",
       
-      "I enjoy turning ambiguity into structure by making data usable, designing end-to-end machine learning pipelines, and building models that real users can actually trust. I am especially drawn to user-facing ML and bridging the gap between research ideas and production-ready systems. Lately, I have been working on agentic and autonomous AI systems, with a strong focus on fairness and accessibility. My focus is on building systems that reason clearly and remain understandable as autonomy increases.",
+      "I enjoy turning ambiguity into structure by making data usable, designing end-to-end machine learning pipelines, and building models that real users can actually trust. I am especially drawn to user-facing ML and bridging the gap between research ideas and production-ready systems.",
+
+      "Lately, I have been working on agentic and autonomous AI systems, with a strong focus on fairness and accessibility. My focus is on building systems that reason clearly and remain understandable as autonomy increases.",
       
       "I am an engineer who believes AI should be understandable, debatable, and used ethically, not treated as a black box."
     ]
@@ -59,12 +61,13 @@ export const portfolioData = {
 
     // SKILLS BY CATEGORY
   skills: {
-    "Languages": ["Python", "TypeScript", "SQL", "R", "Scala", "Go", "Bash", "Julia"],
-    "ML/DL": ["PyTorch", "TensorFlow", "scikit-learn", "Hugging Face", "LangChain", "XGBoost", "Keras", "JAX"],
-    "Data/DB": ["PostgreSQL", "MongoDB", "Redis", "Snowflake", "BigQuery", "DuckDB", "Pinecone", "ChromaDB"],
-    "Cloud/DevOps": ["AWS", "GCP", "Azure", "Docker", "Kubernetes", "Terraform", "MLflow", "Airflow"],
-    "Tools": ["Git", "FastAPI", "Streamlit", "Grafana", "dbt", "Spark", "Ray", "Weights & Biases"],
-    "Web": ["HTML", "CSS", "JavaScript", "Node.js"]
+    "Programming": ["Python", "C", "SQL"],
+    "Libraries & Frameworks": ["PyTorch", "Pandas", "NumPy", "TensorFlow", "scikit-learn", "Matplotlib", "Plotly", "Hugging Face", "LangChain", "XGBoost", "Keras"],
+    "ML & NLP": ["Prompt Engineering", "LLMs", "Transformers", "Speech-to-Text", "LSTM"],
+    "Data/DB": ["PostgreSQL", "BigQuery"],
+    "Cloud/DevOps": ["GCP", "Docker", "Kubernetes", "Terraform"],
+    "Tools": ["Git", "FastAPI", "Streamlit", "Spark"],
+    "Web": ["HTML", "CSS", "JavaScript"]
   },
 
   // EXPERIENCE / TIMELINE - Single experience from screenshot
@@ -88,6 +91,20 @@ export const portfolioData = {
 
   // PROJECTS
   projects: [
+    
+    {
+      title: "RAAi: Agentic Research Assistant",
+      outcome: "Autonomous, multi-stage research with transparent reasoning and source-backed analysis.",
+      highlights: [
+        "Goal-driven agent pipeline for planning, searching, analysis, and verification",
+        "Iterative web research with critical review and gap detection",
+        "Designed for deep technical exploration, literature scanning, and exploratory research"
+      ],
+      techStack: ["LangGraph", "OpenAI", "Streamlit", "ddgs"],
+      github: "https://github.com/sunny-arch-82/RAAi",
+      featured: false
+    },
+    
     {
       title: "XploRAG: Explainable RAG",
       outcome: "Explainable RAG with verified sources for fast, transparent technical search.",
@@ -97,7 +114,7 @@ export const portfolioData = {
         "Designed for trustworthy technical Q&A and quick debugging workflows"
       ],
       techStack: ["RAG", "FAISS", "MPNet", "FLAN-T5"],
-      github: "https://github.com/sunny-arch-82",
+      github: "https://github.com/sunny-arch-82/xploRAG",
       featured: true
     },
     {
@@ -109,7 +126,7 @@ export const portfolioData = {
         "Built to scale into a personalized student dashboard experience"
       ],
       techStack: ["LangChain", "Search", "Retrieval", "React"],
-      github: "https://github.com/sunny-arch-82",
+      github: "https://github.com/sunny-arch-82/welearn-backend",
       featured: true
     },
     {
@@ -121,7 +138,7 @@ export const portfolioData = {
         "BigQuery ML integration for scalable model training and scoring"
       ],
       techStack: ["Python", "GCP", "BigQuery", "GeoML"],
-      github: "https://github.com/sunny-arch-82",
+      github: "https://github.com/sunny-arch-82/ClimateRiskAI",
       featured: true
     },
     {
@@ -133,7 +150,7 @@ export const portfolioData = {
         "Telemetry monitoring prototype that flags anomalies and summarizes incidents"
       ],
       techStack: ["Agents", "RAG", "Telemetry", "FastAPI"],
-      github: "https://github.com/sunny-arch-82",
+      github: "https://github.com/sunny-arch-82/synapseops",
       featured: false
     },
     {
@@ -145,22 +162,10 @@ export const portfolioData = {
         "Designed for extensible skills and new intents over time"
       ],
       techStack: ["NLP", "spaCy", "NLTK", "Speech"],
-      github: "https://github.com/sunny-arch-82",
+      github: "https://github.com/sunny-arch-82/johnX",
       featured: false
     },
-    {
-      title: "AURA",
-      outcome: "AI project sandbox for experiments, workflows, and rapid prototypes.",
-      highlights: [
-        "Reusable templates for quick experimentation and iteration",
-        "Workflow scaffolding for data, model, and evaluation loops",
-        "Organized structure for rapid prototyping across AI projects"
-      ],
-      techStack: ["AI", "Pipelines", "APIs", "Cloud"],
-      github: "https://github.com/sunny-arch-82",
-      featured: false
-    }
-  ],
+   ],
 
   // DOCUMENTS SECTION
   documents: [

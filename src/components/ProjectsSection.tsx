@@ -8,7 +8,7 @@ const ProjectsSection: React.FC = () => {
   return (
     <section id="projects" className="section-container bg-card/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-title reveal-element">Projects</h2>
+        <h2 className="section-title reveal-element">Featured Projects</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {projects.map((project, index) => (
@@ -19,13 +19,7 @@ const ProjectsSection: React.FC = () => {
               }`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Featured Badge */}
-              {project.featured && (
-                <span className="absolute -top-2 -right-2 px-2 py-1 text-xs font-mono bg-accent text-background rounded-md">
-                  Featured
-                </span>
-              )}
-
+      
               {/* Title & Outcome */}
               <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
                 {project.title}

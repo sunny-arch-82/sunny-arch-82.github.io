@@ -13,19 +13,26 @@ const AboutSection: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
             {/* Bio Text - Takes more space */}
-            <div className="lg:col-span-3 reveal-element">
-              <div className="space-y-5">
-                {aboutBio.paragraphs.map((text, i) => (
-                  <p
+            <div className="lg:col-span-3 reveal-element space-y-6">
+              {aboutBio.paragraphs.map((text, i) => {
+                  const isLast = i === aboutBio.paragraphs.length - 1;
+
+                  return (
+                   <p
                     key={i}
-                    className="text-lg sm:text-xl text-muted-foreground leading-relaxed" 
+                    className={`text-lg sm:text-xl leading-relaxed ${
+                      isLast
+                       ? "text-accent font-semibold border-l-2 border-accent/60 pl-4" 
+                       : "text-foreground"
+                    }`}
                   >
                     {text}
                   </p>
-                ))}
-              </div>
+                );  
+              })}  
             </div>
-
+            
+    
             {/* Education Box - Fixed size, doesn't stretch */}
             <div className="lg:col-span-2 reveal-element" style={{ animationDelay: '100ms' }}>
               <div className="glass-card p-6">
