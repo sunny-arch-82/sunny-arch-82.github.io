@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { portfolioData } from '@/data/portfolioData';
 import { GithubIcon, LinkedinIcon, MailIcon, SendIcon, CheckIcon, MapPinIcon, PhoneIcon } from './icons/Icons';
+import emailjs from "@emailjs/browser";
 
 const ContactSection: React.FC = () => {
   const { personal } = portfolioData;
@@ -11,7 +12,12 @@ const ContactSection: React.FC = () => {
 
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
-    
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+    } else if (formData.subject.length > 150) {
+      newErrors.subject = "Subject must be less than 150 characters";
+    }
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required';
     } else if (formData.name.length > 100) {
@@ -40,16 +46,33 @@ const ContactSection: React.FC = () => {
     if (!validateForm()) return;
     
     setIsSubmitting(true);
-    
-    // Simulate submission delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
+    setIsSubmitted(false);
+
+    try{
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+      );
+
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setErrors({});
+    } catch (err) {
+      console.error("EmailJS send failed:", err);
+      setErrors((prev) => ({
+        ...prev,
+        form: "Failed to send message. Please try again in a moment.",
+      }));  
+    } finally { 
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -72,14 +95,27 @@ const ContactSection: React.FC = () => {
               </h2>
               <div className="w-16 h-1 bg-accent rounded-full mb-8" />
               
-              <form onSubmit={handleSubmit} className="space-y-5">
+              
+              {/* 🔹 Success / error messages (moved up) */} 
+              <div className="mb-4 space-y-2">
                 {isSubmitted && (
-                  <div className="flex items-center gap-3 p-4 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400">
-                    <CheckIcon size={20} />
-                    <span>Message sent successfully! I'll get back to you soon.</span>
+                  <div className="flex items-center gap-2 rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm text-green-300">
+                    <CheckIcon size={18} />
+                    <span>Message sent successfully! I&apos;ll get back to you soon.</span>
                   </div>
                 )}
-                
+
+                {errors.form && (
+                  <div className="rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-2 text-sm text-red-300">
+                    {errors.form}
+                  </div>
+                )}
+              </div>
+
+              <form onSubmit={handleSubmit}>
+
+
+              <div className="space-y-4">
                 <div>
                   <input
                     type="text"
@@ -92,7 +128,7 @@ const ContactSection: React.FC = () => {
                     aria-describedby={errors.name ? 'name-error' : undefined}
                   />
                   {errors.name && (
-                    <p id="name-error" className="text-destructive text-sm mt-1">{errors.name}</p>
+                    <p id="name-error" className="mt-1 text-sm text-destructive">{errors.name}</p>
                   )}
                 </div>
                 
@@ -108,7 +144,7 @@ const ContactSection: React.FC = () => {
                     aria-describedby={errors.email ? 'email-error' : undefined}
                   />
                   {errors.email && (
-                    <p id="email-error" className="text-destructive text-sm mt-1">{errors.email}</p>
+                    <p id="email-error" className="mt-1 text-sm text-destructive">{errors.email}</p>
                   )}
                 </div>
 
@@ -119,9 +155,15 @@ const ContactSection: React.FC = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="form-input"
+                    className={`form-input ${errors.subject ? "border-destructive" : ""}`}
                     placeholder="Subject"
+                    aria-describedby={errors.subject ? "subject-error" : undefined}
                   />
+                  {errors.subject && (
+                    <p id="subject-error" className="mt-1 text-sm text-destructive">
+                      {errors.subject}
+                    </p>
+                  )}
                 </div>
                 
                 <div>
@@ -139,17 +181,14 @@ const ContactSection: React.FC = () => {
                     <p id="message-error" className="text-destructive text-sm mt-1">{errors.message}</p>
                   )}
                 </div>
+              </div>
                 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <span>Sending...</span>
-                  ) : (
-                    <span>Send Message</span>
-                  )}
+                  className="mt-4 inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-60">
+                            
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>
