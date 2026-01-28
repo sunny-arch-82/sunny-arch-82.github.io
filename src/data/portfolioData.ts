@@ -61,13 +61,12 @@ export const portfolioData = {
 
     // SKILLS BY CATEGORY
   skills: {
-    "Programming": ["Python", "C", "SQL"],
-    "Libraries & Frameworks": ["PyTorch", "Pandas", "NumPy", "TensorFlow", "scikit-learn", "Matplotlib", "Plotly", "Hugging Face", "LangChain", "XGBoost", "Keras"],
+    "Programming": ["Python","SQL"],
+    "Libraries & Frameworks": ["PyTorch", "Pandas", "NumPy", "TensorFlow", "scikit-learn", "Matplotlib", "Plotly", "Hugging Face", "LangChain", "XGBoost", "Keras", "FastAPI", "Streamlit", "Spark"],
     "ML & NLP": ["Prompt Engineering", "LLMs", "Transformers", "Speech-to-Text", "LSTM"],
     "Data/DB": ["PostgreSQL", "BigQuery"],
     "Cloud/DevOps": ["GCP", "Docker", "Kubernetes", "Terraform"],
-    "Tools": ["Git", "FastAPI", "Streamlit", "Spark"],
-    "Web": ["HTML", "CSS", "JavaScript"]
+    "Tools & Technologies": ["Git", "Jupyter", "Terraform"],
   },
 
   // EXPERIENCE / TIMELINE - Single experience from screenshot
