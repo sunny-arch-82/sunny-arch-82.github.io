@@ -31,7 +31,7 @@ export const portfolioData = {
       location: "Boulder, CO",
       startDate: "Aug 2025",
       endDate: "April 2027",
-      gpa: "3.8",
+      gpa: "3.77",
       courses: ["Machine Learning", "Natural Language Processing", "Neural Networks", "Datacenter Scaler Computing"]
     },
     {
