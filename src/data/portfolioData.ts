@@ -64,9 +64,9 @@ export const portfolioData = {
     "Programming": ["Python","SQL", "Bash", "JavaScript/TypeScript"],
     "Frameworks & Libraries": ["REST APIs", "Flask", "Django", "TensorFlow", "Pandas", "NumPy", "Data Visualization", "PyTorch"],
     "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
-    "Cloud & Infrastructure": ["AWS", "GCP", "Dockrt", "Terraform"],
+    "Cloud & Infrastructure": ["AWS", "GCP", "Docker", "Terraform"],
     "Tools & Technologies": ["Git", "GitHub", "VS Code", "YAML", "JSON", "PyCharm", "Jupyter", "WordPress"],
-    "Operating Systems": ["Ubuntu", "Windows", "macOS"],
+    "Operating Systems": ["Ubuntu", "Windows", "macOS"]
   },
 
   // EXPERIENCE / TIMELINE - Single experience from screenshot
