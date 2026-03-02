@@ -80,9 +80,10 @@ export const portfolioData = {
       endDate: "May 2025",
       description: "Worked on real-time GPS analytics and geospatial dashboards, improving anomaly detection workflows and accelerating decision-making.",
       bullets: [
-        "Contributed to real-time GPS analytics pipelines in Python, applying Random Forest for anomaly classification and K-Means clustering for unsupervised anomaly detection, improving deployment efficiency by 22%.",
-        "Built 4+ interactive dashboards with Plotly and Streamlit, enabling geospatial visualization and boosting decision speed by 15%.",
-        "Collaborated with cross-functional teams to integrate real-time analytics and GPS tracking into a mobile application, reducing workflow time for 500+ users."
+        "Processed sales and service data using PostgreSQL and Python (Pandas), reducing data inconsistencies by 8% and delivering insights that improved operational reporting.",
+        "Optimized anomaly detection reliability using Python (Pandas, Scikit-learn), reducing false alerts by 12%.",
+        "Identified increased GPS latency in remote regions, contributing to tracking disruptions, in collaboration with the software team to reduce reporting delays by 15%.",
+        "Developed real-time Plotly Dash dashboards for GPS tracking and analytics, supporting 500+ users."
       ],
       techStack: ["Python", "Random Forest", "K-Means", "Plotly", "Streamlit", "GPS Analytics", "Geospatial"]
     }
