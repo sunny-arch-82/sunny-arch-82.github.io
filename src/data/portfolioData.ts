@@ -78,7 +78,7 @@ export const portfolioData = {
       location: "Hyderabad, India",
       startDate: "Dec 2024",
       endDate: "May 2025",
-      description: "Worked on real-time GPS analytics and geospatial dashboards, improving anomaly detection workflows and accelerating decision-making.",
+      description: "Developed real-time GPS analytics and dashboards, strengthening anomaly detection workflows and improving operational visibility.",
       bullets: [
         "Processed sales and service data using PostgreSQL and Python (Pandas), reducing data inconsistencies by 8% and delivering insights that improved operational reporting.",
         "Optimized anomaly detection reliability using Python (Pandas, Scikit-learn), reducing false alerts by 12%.",
