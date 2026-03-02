@@ -85,7 +85,7 @@ export const portfolioData = {
         "Identified increased GPS latency in remote regions, contributing to tracking disruptions, in collaboration with the software team to reduce reporting delays by 15%.",
         "Developed real-time Plotly Dash dashboards for GPS tracking and analytics, supporting 500+ users."
       ],
-      techStack: ["Python", "Random Forest", "K-Means", "Plotly", "Streamlit", "GPS Analytics", "Geospatial"]
+      techStack: ["Python(Pandas, Scikit-learn)", "SQL", "PostgreSQL", "Plotly", "Streamlit", "GPS Analytics", "Geospatial"]
     }
   ],
 
