@@ -80,7 +80,7 @@ export const portfolioData = {
       endDate: "May 2025",
       description: "Developed real-time GPS analytics and dashboards, strengthening anomaly detection workflows and improving operational visibility.",
       bullets: [
-        "Processed sales and service data using PostgreSQL and Python (Pandas), reducing data inconsistencies by 8% and delivering insights that improved operational reporting.",
+        "Processed sales and service data using PostgreSQL and Python (Pandas), reducing data inconsistencies by 28% and delivering insights that improved operational reporting.",
         "Optimized anomaly detection reliability using Python (Pandas, Scikit-learn), reducing false alerts by 12%.",
         "Identified increased GPS latency in remote regions, contributing to tracking disruptions, in collaboration with the software team to reduce reporting delays by 15%.",
         "Developed real-time Plotly Dash dashboards for GPS tracking and analytics, supporting 500+ users."
