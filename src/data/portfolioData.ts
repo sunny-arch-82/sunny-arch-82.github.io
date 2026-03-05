@@ -65,7 +65,7 @@ export const portfolioData = {
     "Frameworks & Libraries": ["REST APIs", "Flask", "Django", "TensorFlow", "Pandas", "NumPy", "Data Visualization", "PyTorch"],
     "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
     "Cloud & Infrastructure": ["AWS", "GCP", "Docker", "Terraform"],
-    "Tools & Technologies": ["Git", "GitHub", "VS Code", "YAML", "JSON", "PyCharm", "Jupyter", "WordPress"],
+    "Tools & Technologies": ["Git", "GitHub", "VS Code", "YAML", "JSON", "PyCharm", "Jupyter", "Latex", "WordPress"],
     "Operating Systems": ["Linux(Ubuntu)", "Windows", "macOS"]
   },
 
