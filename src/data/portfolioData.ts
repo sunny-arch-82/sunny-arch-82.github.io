@@ -66,7 +66,7 @@ export const portfolioData = {
     "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
     "Cloud & Infrastructure": ["AWS", "GCP", "Docker", "Terraform"],
     "Tools & Technologies": ["Git", "GitHub", "VS Code", "YAML", "JSON", "PyCharm", "Jupyter", "Latex", "WordPress"],
-    "Operating Systems": ["Linux(Ubuntu)", "Windows", "macOS"]
+    "Operating Systems": ["Linux (Ubuntu)", "Windows", "macOS"]
   },
 
   // EXPERIENCE / TIMELINE - Single experience from screenshot
