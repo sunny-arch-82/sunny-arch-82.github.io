@@ -14,11 +14,11 @@ export const portfolioData = {
     pitch: "I build reliable AI/ML systems from data to deployment.",
     location: "Boulder, CO - 80301",
     phone: "(720) 742-1391",
-    email: "synnychinu@gmail.com",
+    email: "shashidhar.kanaparthi82@gmail.com",
     github: "https://github.com/sunny-arch-82",
     linkedin: "https://www.linkedin.com/in/shashidhar-reddy-kanaparthi-0081a4290/",
-    resumeUrl: "/resume.pdf", // Replace with actual resume URL
-    profilePhoto: "/profile.png", // Save your photo as public/profile.png
+    resumeUrl: "/resume.pdf", 
+    profilePhoto: "/profile.png",
     contactBio: "I am always open to collaborations, discussions, and new opportunities in data science, AI, and cloud technologies. Whether you have a project idea, a research inquiry, or just want to connect, feel free to reach out!"
   },
 
@@ -42,7 +42,7 @@ export const portfolioData = {
       startDate: "Sep 2021",
       endDate: "May 2025",
       gpa: "3.82",
-      courses: ["Artificial Intelligence", "Data Structures", "Computer Networks", "Operating Systems"]
+      courses: ["Artificial Intelligence", "Data Structures", "Database Management System", "Computer Networks"]
     }
   ],
 
@@ -62,7 +62,7 @@ export const portfolioData = {
     // SKILLS BY CATEGORY
   skills: {
     "Programming": ["Python","SQL", "Bash", "JavaScript/TypeScript"],
-    "Frameworks & Libraries": ["REST APIs", "Flask", "Django", "TensorFlow", "Pandas", "NumPy", "Data Visualization", "PyTorch"],
+    "Frameworks & Libraries": ["REST APIs", "Spark", "Flask", "Pandas", "NumPy", "PyTorch", "Scikit-learn", "TensorFlow", "Streamlit"],
     "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
     "Cloud & Infrastructure": ["AWS", "GCP", "Docker", "Terraform"],
     "Tools & Technologies": ["Git", "GitHub", "VS Code", "YAML", "JSON", "PyCharm", "Jupyter", "Latex", "WordPress"],
